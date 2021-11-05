@@ -11,7 +11,12 @@ function App() {
     const { name, value } = event.target;
     console.log(name, value);
 
-    setContact((prevValue) => ({ ...prevValue, [name]: value }));
+    setContact((prevValue) => {
+      return {
+        ...prevValue,
+        [name]: value
+      };
+    });
   }
 
   return (
